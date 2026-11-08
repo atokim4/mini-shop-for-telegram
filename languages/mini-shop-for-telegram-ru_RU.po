@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mini Shop for Telegram\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Domain: mini-shop-for-telegram\n"
+
+msgid "Mini Shop for Telegram"
+msgstr "Мини-магазин для Telegram"
+
+msgid "Turns your WooCommerce store into a Telegram Mini App shop run by your own bot: catalog, cart, checkout handoff and order status messages. Self-hosted, no third-party service."
+msgstr "Превращает магазин WooCommerce в Telegram Mini App на вашем собственном боте: каталог, корзина, переход к оформлению заказа и сообщения о статусе заказа. Работает на вашем сайте, без сторонних сервисов."
+
+msgid "Unexpected answer from Telegram (HTTP %d)."
+msgstr "Неожиданный ответ от Telegram (HTTP %d)."
+
+msgid "Telegram rejected the request."
+msgstr "Telegram отклонил запрос."
+
+msgid "Telegram did not return the bot profile."
+msgstr "Telegram не вернул профиль бота."
+
+msgid "Shop"
+msgstr "Магазин"
+
+msgid "Open the shop from the Telegram bot to place an order."
+msgstr "Откройте магазин через Telegram-бота, чтобы оформить заказ."
+
+msgid "Your cart is empty."
+msgstr "Ваша корзина пуста."
+
+msgid "A product in your cart is no longer available."
+msgstr "Один из товаров в корзине больше недоступен."
+
+msgid "Choose the options of “%s” again."
+msgstr "Выберите параметры «%s» ещё раз."
+
+msgid "“%s” is out of stock."
+msgstr "«%s» нет в наличии."
+
+msgid "That quantity of “%s” is not available."
+msgstr "Такого количества «%s» нет в наличии."
+
+msgid "All"
+msgstr "Все"
+
+msgid "Search products"
+msgstr "Поиск товаров"
+
+msgid "Add to cart"
+msgstr "В корзину"
+
+msgid "In cart"
+msgstr "В корзине"
+
+msgid "Out of stock"
+msgstr "Нет в наличии"
+
+msgid "from %s"
+msgstr "от %s"
+
+msgid "Choose %s"
+msgstr "Выберите: %s"
+
+msgid "This combination is not available"
+msgstr "Такой вариант недоступен"
+
+msgid "Cart"
+msgstr "Корзина"
+
+msgid "Your cart is empty"
+msgstr "Корзина пуста"
+
+msgid "Add something from the catalog and it will wait here."
+msgstr "Добавьте товары из каталога, и они появятся здесь."
+
+msgid "Browse the catalog"
+msgstr "Открыть каталог"
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "Decrease quantity"
+msgstr "Уменьшить количество"
+
+msgid "Increase quantity"
+msgstr "Увеличить количество"
+
+msgid "Subtotal"
+msgstr "Сумма"
+
+msgid "Shipping and taxes are calculated at checkout."
+msgstr "Доставка и налоги рассчитываются при оформлении."
+
+msgid "View cart · %s"
+msgstr "Корзина · %s"
+
+msgid "Checkout · %s"
+msgstr "Оформить · %s"
+
+msgid "Loading the catalog…"
+msgstr "Загружаем каталог…"
+
+msgid "Could not load the shop. Check your connection."
+msgstr "Не удалось загрузить магазин. Проверьте подключение."
+
+msgid "Try again"
+msgstr "Повторить"
+
+msgid "Nothing here yet"
+msgstr "Здесь пока пусто"
+
+msgid "No products match “%s”"
+msgstr "По запросу «%s» ничего не найдено"
+
+msgid "Checkout failed. Please try again."
+msgstr "Не удалось перейти к оформлению. Попробуйте ещё раз."
+
+msgid "Open this shop from its Telegram bot to place an order."
+msgstr "Откройте магазин через его Telegram-бота, чтобы оформить заказ."
+
+msgid "Some items changed since you added them and were updated."
+msgstr "Некоторые товары изменились после добавления в корзину и были обновлены."
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Telegram: buyer was told the order is “%s”."
+msgstr "Telegram: покупателю сообщили, что заказ «%s»."
+
+msgid "Telegram message failed: %s"
+msgstr "Не удалось отправить сообщение в Telegram: %s"
+
+msgid "Order %1$s: %2$s"
+msgstr "Заказ %1$s: %2$s"
+
+msgid "Total: %s"
+msgstr "Итого: %s"
+
+msgid "Payment received. We are preparing your order."
+msgstr "Оплата получена. Готовим ваш заказ."
+
+msgid "We are waiting for your payment to be confirmed."
+msgstr "Ждём подтверждения оплаты."
+
+msgid "Your order is complete. Thank you for shopping with us!"
+msgstr "Заказ выполнен. Спасибо за покупку!"
+
+msgid "Your order was cancelled. Contact the shop if you have questions."
+msgstr "Заказ отменён. Если есть вопросы, свяжитесь с магазином."
+
+msgid "Your order was refunded."
+msgstr "Деньги за заказ возвращены."
+
+msgid "Telegram buyer:"
+msgstr "Покупатель в Telegram:"
+
+msgid "(id %d)"
+msgstr "(id %d)"
+
+msgid "Mini Shop for Telegram needs WooCommerce to be installed and active."
+msgstr "Для работы Mini Shop for Telegram нужен установленный и активный WooCommerce."
+
+msgid "Telegram Mini Shop"
+msgstr "Магазин в Telegram"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Settings saved. The bot token was removed."
+msgstr "Настройки сохранены. Токен бота удалён."
+
+msgid "Settings saved, but that does not look like a bot token. Copy it from @BotFather again."
+msgstr "Настройки сохранены, но это не похоже на токен бота. Скопируйте его из @BotFather ещё раз."
+
+msgid "Settings saved."
+msgstr "Настройки сохранены."
+
+msgid "Bot disconnected. The token is still saved."
+msgstr "Бот отключён. Токен по-прежнему сохранён."
+
+msgid "Connected to @%s. Open the bot in Telegram and send /start."
+msgstr "Подключено к @%s. Откройте бота в Telegram и отправьте /start."
+
+msgid "Telegram said: %s"
+msgstr "Ответ Telegram: %s"
+
+msgid "You are not allowed to change these settings."
+msgstr "У вас нет прав на изменение этих настроек."
+
+msgid "This checkout link has expired. Open the shop in Telegram and tap Checkout again."
+msgstr "Ссылка на оформление устарела. Откройте магазин в Telegram и снова нажмите «Оформить»."
+
+msgid "Welcome to %s! Tap the button below to browse the catalog and order right here in Telegram."
+msgstr "Добро пожаловать в %s! Нажмите кнопку ниже, чтобы открыть каталог и заказать прямо в Telegram."
+
+msgid "Bot status"
+msgstr "Состояние бота"
+
+msgid "Bot"
+msgstr "Бот"
+
+msgid "Connected to @%s"
+msgstr "Подключено к @%s"
+
+msgid "Open in Telegram"
+msgstr "Открыть в Telegram"
+
+msgid "Token saved, bot not connected."
+msgstr "Токен сохранён, бот не подключён."
+
+msgid "Not set up. Create a bot with @BotFather and paste its token below."
+msgstr "Не настроено. Создайте бота через @BotFather и вставьте его токен ниже."
+
+msgid "Last Telegram error: %s"
+msgstr "Последняя ошибка Telegram: %s"
+
+msgid "Mini App URL"
+msgstr "Адрес Mini App"
+
+msgid "Set automatically as the bot menu button. Telegram needs an HTTPS site."
+msgstr "Устанавливается автоматически как кнопка меню бота. Telegram требует сайт на HTTPS."
+
+msgid "Reconnect bot"
+msgstr "Переподключить бота"
+
+msgid "Connect bot"
+msgstr "Подключить бота"
+
+msgid "Disconnect"
+msgstr "Отключить"
+
+msgid "Bot token"
+msgstr "Токен бота"
+
+msgid "Saved. Paste a new token to replace it."
+msgstr "Сохранён. Вставьте новый токен, чтобы заменить его."
+
+msgid "Stored on this site only and never shown again. Saving a new token connects the bot."
+msgstr "Хранится только на этом сайте и больше не показывается. При сохранении нового токена бот подключается."
+
+msgid "Remove the saved token"
+msgstr "Удалить сохранённый токен"
+
+msgid "Reply to /start"
+msgstr "Ответ на /start"
+
+msgid "Default: a short welcome with the shop name."
+msgstr "По умолчанию: короткое приветствие с названием магазина."
+
+msgid "Button text"
+msgstr "Текст кнопки"
+
+msgid "Storefront"
+msgstr "Витрина"
+
+msgid "Shop title"
+msgstr "Название магазина"
+
+msgid "Accent colour"
+msgstr "Акцентный цвет"
+
+msgid "Hex colour for prices and badges. Leave empty to follow the buyer’s Telegram theme."
+msgstr "HEX-цвет для цен и значков. Оставьте пустым, чтобы использовать тему Telegram покупателя."
+
+msgid "Categories"
+msgstr "Категории"
+
+msgid "None ticked: the whole catalog (simple and variable products)."
+msgstr "Ничего не отмечено: весь каталог (простые и вариативные товары)."
+
+msgid "Buyer messages"
+msgstr "Сообщения покупателю"
+
+msgid "Send a Telegram message when an order becomes"
+msgstr "Отправлять сообщение в Telegram, когда заказ получает статус"
+
+msgid "Order statuses"
+msgstr "Статусы заказа"
+
+msgid "This shop needs JavaScript. Open it from the Telegram bot."
+msgstr "Для работы магазина нужен JavaScript. Откройте его через Telegram-бота."

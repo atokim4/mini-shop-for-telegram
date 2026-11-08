@@ -1,0 +1,53 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/tools.php?page=plugin-check",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "login"
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "plugin-check"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "mini-shop-for-telegram/mini-shop-for-telegram.php"
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"woocommerce_onboarding_profile": {
+					"skipped": true
+				},
+				"woocommerce_task_list_hidden": "yes"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; delete_transient( '_wc_activation_redirect' );"
+		}
+	]
+}

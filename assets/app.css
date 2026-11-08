@@ -1,0 +1,731 @@
+/*
+ * Mini Shop for Telegram: storefront styles.
+ * Colours come from the buyer's Telegram theme (--tg-theme-* variables set by telegram-web-app.js);
+ * the fallbacks below are used when the page is opened outside Telegram.
+ * Logical properties only (inline-start/end), so RTL works without a separate sheet.
+ */
+
+:root {
+	--bg: var(--tg-theme-bg-color, #ffffff);
+	--surface: var(--tg-theme-secondary-bg-color, #f0f1f4);
+	--text: var(--tg-theme-text-color, #15171a);
+	--hint: var(--tg-theme-hint-color, #6b7178);
+	--link: var(--tg-theme-link-color, #2a7bd6);
+	--button: var(--tg-theme-button-color, #2a7bd6);
+	--button-text: var(--tg-theme-button-text-color, #ffffff);
+	--separator: var(--tg-theme-section-separator-color, rgb(0 0 0 / 0.08));
+	--danger: var(--tg-theme-destructive-text-color, #d23c3c);
+	--accent: var(--mstg-accent, var(--button));
+
+	--radius-media: 18px;
+	--radius-control: 12px;
+	--gap: 12px;
+	--pad: 16px;
+	--ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+	color-scheme: light;
+}
+
+:root[data-scheme="dark"] {
+	--bg: var(--tg-theme-bg-color, #17191c);
+	--surface: var(--tg-theme-secondary-bg-color, #0f1012);
+	--text: var(--tg-theme-text-color, #f2f3f5);
+	--hint: var(--tg-theme-hint-color, #8d939a);
+	--separator: var(--tg-theme-section-separator-color, rgb(255 255 255 / 0.08));
+	color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	margin: 0;
+	min-height: var(--tg-viewport-stable-height, 100vh);
+	background: var(--bg);
+	color: var(--text);
+	font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+	font-synthesis: none;
+	caret-color: var(--accent);
+}
+
+::selection {
+	background: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+button,
+input {
+	font: inherit;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+	border: 0;
+	background: none;
+	padding: 0;
+	touch-action: manipulation;
+}
+
+button:disabled {
+	cursor: default;
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.icon {
+	width: 22px;
+	height: 22px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	flex: none;
+}
+
+.muted {
+	color: var(--hint);
+	font-size: 13px;
+}
+
+.screen {
+	padding-block-end: calc(88px + env(safe-area-inset-bottom));
+}
+
+/* Header ---------------------------------------------------------------- */
+
+.bar {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 10px 8px 6px var(--pad);
+	background: var(--bg);
+}
+
+.title {
+	flex: 1;
+	min-width: 0;
+	margin: 0;
+	font-size: 22px;
+	line-height: 1.15;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.search {
+	flex: 1;
+	min-width: 0;
+	height: 40px;
+	padding-inline: 14px;
+	border: 0;
+	border-radius: var(--radius-control);
+	background: var(--surface);
+	outline-offset: 0;
+}
+
+.search::placeholder {
+	color: var(--hint);
+}
+
+.icon-button {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+}
+
+.icon-button:active {
+	background: var(--surface);
+}
+
+.badge {
+	position: absolute;
+	inset-block-start: 4px;
+	inset-inline-end: 2px;
+	min-width: 18px;
+	height: 18px;
+	padding-inline: 5px;
+	border-radius: 9px;
+	background: var(--accent);
+	color: var(--button-text);
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 18px;
+	text-align: center;
+	font-variant-numeric: tabular-nums;
+}
+
+/* Category chips -------------------------------------------------------- */
+
+.chips {
+	display: flex;
+	gap: 8px;
+	padding: 4px var(--pad) 12px;
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+
+.chips::-webkit-scrollbar {
+	display: none;
+}
+
+.chip {
+	flex: none;
+	height: 34px;
+	min-width: 56px;
+	padding-inline: 14px;
+	border-radius: 17px;
+	background: var(--surface);
+	font-weight: 500;
+	transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.chip[aria-pressed="true"] {
+	background: var(--text);
+	color: var(--bg);
+}
+
+/* Product grid ---------------------------------------------------------- */
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 22px var(--gap);
+	margin: 0;
+	padding: 0 var(--pad);
+	list-style: none;
+}
+
+.tile {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	min-width: 0;
+}
+
+.tile-open {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	text-align: start;
+}
+
+.tile-media,
+.sheet-media,
+.cart-media {
+	position: relative;
+	overflow: hidden;
+	aspect-ratio: 1;
+	border-radius: var(--radius-media);
+	background: var(--surface);
+}
+
+.tile-media img,
+.sheet-media img,
+.cart-media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.is-out .tile-media > :first-child {
+	opacity: 0.45;
+	filter: grayscale(1);
+}
+
+.monogram {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: 100%;
+	background: hsl(var(--hue) 38% 88%);
+	color: hsl(var(--hue) 42% 30%);
+	font-size: clamp(36px, 14vw, 64px);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+}
+
+[data-scheme="dark"] .monogram {
+	background: hsl(var(--hue) 22% 21%);
+	color: hsl(var(--hue) 40% 74%);
+}
+
+/*
+ * The price sticker: a tab of page background cut into the lower corner of the photo,
+ * with concave corners drawn by two radial-gradient pseudo elements.
+ */
+.sticker {
+	--notch: 14px;
+	position: absolute;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+	padding: 7px 12px 0 2px;
+	border-start-end-radius: var(--notch);
+	background: var(--bg);
+	font-size: 16px;
+	font-weight: 750;
+	letter-spacing: -0.01em;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.sticker::before,
+.sticker::after {
+	content: "";
+	position: absolute;
+	width: var(--notch);
+	height: var(--notch);
+	background: radial-gradient(circle at 100% 0, transparent calc(var(--notch) - 0.5px), var(--bg) var(--notch));
+}
+
+.sticker::before {
+	inset-block-end: 100%;
+	inset-inline-start: 0;
+}
+
+.sticker::after {
+	inset-block-end: 0;
+	inset-inline-start: 100%;
+}
+
+[dir="rtl"] .sticker::before,
+[dir="rtl"] .sticker::after {
+	background: radial-gradient(circle at 0 0, transparent calc(var(--notch) - 0.5px), var(--bg) var(--notch));
+}
+
+.sticker.is-sale .now,
+.sheet-price .was + span {
+	color: var(--accent);
+}
+
+.was {
+	color: var(--hint);
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.tile-name {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-height: 1.3;
+	min-height: 2.6em;
+	text-wrap: pretty;
+}
+
+.tile-action {
+	display: flex;
+	min-height: 40px;
+	align-items: center;
+}
+
+.add {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	width: 100%;
+	height: 40px;
+	border-radius: var(--radius-control);
+	background: var(--surface);
+	font-weight: 600;
+	color: var(--link);
+	transition: transform 0.15s var(--ease);
+}
+
+.add .icon {
+	width: 18px;
+	height: 18px;
+}
+
+.add.has-count {
+	background: color-mix(in srgb, var(--accent) 14%, var(--bg));
+	color: var(--text);
+}
+
+.add:active,
+.stepper button:active {
+	transform: scale(0.96);
+}
+
+.stepper {
+	display: grid;
+	grid-template-columns: 44px 1fr 44px;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	border-radius: var(--radius-control);
+	background: var(--accent);
+	color: var(--button-text);
+}
+
+.stepper.is-new {
+	animation: stepper-in 0.28s var(--ease);
+}
+
+.stepper button {
+	display: grid;
+	place-items: center;
+	height: 100%;
+	color: inherit;
+}
+
+.stepper button:disabled {
+	opacity: 0.4;
+}
+
+.stepper .icon {
+	width: 18px;
+	height: 18px;
+}
+
+.stepper output {
+	text-align: center;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+}
+
+@keyframes stepper-in {
+	from {
+		clip-path: inset(0 30% round var(--radius-control));
+	}
+	to {
+		clip-path: inset(0 0 round var(--radius-control));
+	}
+}
+
+/* States ---------------------------------------------------------------- */
+
+.state {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	padding: 72px 32px;
+	text-align: center;
+}
+
+.state-title {
+	margin: 0;
+	font-size: 17px;
+	font-weight: 600;
+	max-width: 28ch;
+}
+
+.state .muted {
+	margin: 0 0 8px;
+	max-width: 32ch;
+}
+
+.notice {
+	margin: 0 var(--pad) 14px;
+	padding: 10px 14px;
+	border-radius: var(--radius-control);
+	background: color-mix(in srgb, var(--danger) 12%, var(--bg));
+	color: var(--text);
+	font-size: 14px;
+}
+
+.button {
+	height: 44px;
+	padding-inline: 22px;
+	border-radius: var(--radius-control);
+	background: var(--button);
+	color: var(--button-text);
+	font-weight: 600;
+}
+
+.skeleton {
+	background: var(--surface);
+	animation: pulse 1.4s ease-in-out infinite;
+}
+
+.chip.skeleton {
+	width: 72px;
+}
+
+.line {
+	display: block;
+	height: 12px;
+	border-radius: 6px;
+}
+
+.line.short {
+	width: 50%;
+}
+
+@keyframes pulse {
+	50% {
+		opacity: 0.55;
+	}
+}
+
+/* Product sheet --------------------------------------------------------- */
+
+.sheet-layer {
+	position: fixed;
+	inset: 0;
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.scrim {
+	position: absolute;
+	inset: 0;
+	background: rgb(0 0 0 / 0.4);
+}
+
+.sheet {
+	position: relative;
+	max-height: 92vh;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	padding: 16px var(--pad) calc(96px + env(safe-area-inset-bottom));
+	border-start-start-radius: 22px;
+	border-start-end-radius: 22px;
+	background: var(--bg);
+	outline: none;
+}
+
+.is-entering .scrim {
+	animation: fade 0.25s ease-out;
+}
+
+.is-entering .sheet {
+	animation: rise 0.36s var(--ease);
+}
+
+.sheet-close {
+	position: absolute;
+	inset-block-start: 22px;
+	inset-inline-end: 22px;
+	z-index: 1;
+	background: color-mix(in srgb, var(--bg) 82%, transparent);
+	backdrop-filter: blur(8px);
+}
+
+.sheet-media {
+	aspect-ratio: 4 / 3;
+}
+
+.sheet-media .monogram {
+	font-size: 96px;
+}
+
+.sheet-name {
+	margin: 16px 0 4px;
+	font-size: 22px;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	text-wrap: balance;
+}
+
+.sheet-price {
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	margin: 0 0 10px;
+	font-size: 20px;
+	font-weight: 750;
+	font-variant-numeric: tabular-nums;
+}
+
+.sheet-price .was {
+	font-size: 15px;
+}
+
+.sheet-text {
+	margin: 0 0 18px;
+	color: var(--hint);
+	max-width: 62ch;
+}
+
+.options {
+	margin: 0 0 16px;
+	padding: 0;
+	border: 0;
+}
+
+.options legend {
+	margin-block-end: 8px;
+	font-weight: 600;
+}
+
+.option-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.option {
+	min-height: 40px;
+	padding-inline: 16px;
+	border-radius: var(--radius-control);
+	box-shadow: inset 0 0 0 1.5px var(--separator);
+	font-weight: 500;
+	transition: box-shadow 0.18s var(--ease), background-color 0.18s var(--ease);
+}
+
+.option[aria-pressed="true"] {
+	background: color-mix(in srgb, var(--accent) 12%, var(--bg));
+	box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.option:disabled {
+	color: var(--hint);
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
+.sheet-qty {
+	max-width: 180px;
+}
+
+@keyframes rise {
+	from {
+		transform: translateY(40%);
+		opacity: 0.4;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+}
+
+/* Cart ------------------------------------------------------------------ */
+
+.cart {
+	margin: 4px 0 0;
+	padding: 0 var(--pad);
+	list-style: none;
+}
+
+.cart-line {
+	display: grid;
+	grid-template-columns: 64px 1fr 112px;
+	gap: 12px;
+	align-items: center;
+	padding-block: 12px;
+	border-block-end: 1px solid var(--separator);
+}
+
+.cart-media {
+	border-radius: 14px;
+}
+
+.cart-media .monogram {
+	font-size: 22px;
+}
+
+.cart-info {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.cart-name {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	font-weight: 600;
+	line-height: 1.3;
+	text-wrap: pretty;
+}
+
+.cart-price {
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+}
+
+.cart-line .stepper {
+	grid-template-columns: 36px 1fr 36px;
+	height: 36px;
+}
+
+.totals {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 18px var(--pad) 4px;
+	font-size: 17px;
+}
+
+.totals strong {
+	font-size: 20px;
+	font-variant-numeric: tabular-nums;
+}
+
+.fineprint {
+	margin: 0;
+	padding-inline: var(--pad);
+}
+
+/* Fallback bar (outside Telegram there is no MainButton) ----------------- */
+
+.fallback-bar {
+	position: fixed;
+	inset-inline: 0;
+	inset-block-end: 0;
+	z-index: 30;
+	padding: 10px var(--pad) calc(10px + env(safe-area-inset-bottom));
+	background: color-mix(in srgb, var(--bg) 90%, transparent);
+	backdrop-filter: blur(12px);
+}
+
+.fallback-bar[hidden] {
+	display: none;
+}
+
+.fallback-bar .main {
+	width: 100%;
+	height: 50px;
+	font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}

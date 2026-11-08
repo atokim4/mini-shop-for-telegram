@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mini Shop for Telegram\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uz\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: mini-shop-for-telegram\n"
+
+msgid "Mini Shop for Telegram"
+msgstr "Telegram uchun mini do‘kon"
+
+msgid "Turns your WooCommerce store into a Telegram Mini App shop run by your own bot: catalog, cart, checkout handoff and order status messages. Self-hosted, no third-party service."
+msgstr "WooCommerce do‘koningizni o‘z botingizdagi Telegram Mini App do‘koniga aylantiradi: katalog, savat, buyurtmani rasmiylashtirishga o‘tish va buyurtma holati haqida xabarlar. O‘z saytingizda ishlaydi, uchinchi tomon xizmatlarisiz."
+
+msgid "Unexpected answer from Telegram (HTTP %d)."
+msgstr "Telegram kutilmagan javob qaytardi (HTTP %d)."
+
+msgid "Telegram rejected the request."
+msgstr "Telegram so‘rovni rad etdi."
+
+msgid "Telegram did not return the bot profile."
+msgstr "Telegram bot profilini qaytarmadi."
+
+msgid "Shop"
+msgstr "Do‘kon"
+
+msgid "Open the shop from the Telegram bot to place an order."
+msgstr "Buyurtma berish uchun do‘konni Telegram bot orqali oching."
+
+msgid "Your cart is empty."
+msgstr "Savatingiz bo‘sh."
+
+msgid "A product in your cart is no longer available."
+msgstr "Savatdagi mahsulotlardan biri endi mavjud emas."
+
+msgid "Choose the options of “%s” again."
+msgstr "«%s» parametrlarini qaytadan tanlang."
+
+msgid "“%s” is out of stock."
+msgstr "«%s» tugagan."
+
+msgid "That quantity of “%s” is not available."
+msgstr "«%s» bunday miqdorda mavjud emas."
+
+msgid "All"
+msgstr "Hammasi"
+
+msgid "Search products"
+msgstr "Mahsulot qidirish"
+
+msgid "Add to cart"
+msgstr "Savatga"
+
+msgid "In cart"
+msgstr "Savatda"
+
+msgid "Out of stock"
+msgstr "Tugagan"
+
+msgid "from %s"
+msgstr "%s dan"
+
+msgid "Choose %s"
+msgstr "Tanlang: %s"
+
+msgid "This combination is not available"
+msgstr "Bunday variant mavjud emas"
+
+msgid "Cart"
+msgstr "Savat"
+
+msgid "Your cart is empty"
+msgstr "Savat bo‘sh"
+
+msgid "Add something from the catalog and it will wait here."
+msgstr "Katalogdan mahsulot qo‘shing, ular shu yerda turadi."
+
+msgid "Browse the catalog"
+msgstr "Katalogni ochish"
+
+msgid "Remove"
+msgstr "O‘chirish"
+
+msgid "Decrease quantity"
+msgstr "Miqdorni kamaytirish"
+
+msgid "Increase quantity"
+msgstr "Miqdorni oshirish"
+
+msgid "Subtotal"
+msgstr "Jami"
+
+msgid "Shipping and taxes are calculated at checkout."
+msgstr "Yetkazib berish va soliqlar rasmiylashtirishda hisoblanadi."
+
+msgid "View cart · %s"
+msgstr "Savat · %s"
+
+msgid "Checkout · %s"
+msgstr "Rasmiylashtirish · %s"
+
+msgid "Loading the catalog…"
+msgstr "Katalog yuklanmoqda…"
+
+msgid "Could not load the shop. Check your connection."
+msgstr "Do‘konni yuklab bo‘lmadi. Internet aloqasini tekshiring."
+
+msgid "Try again"
+msgstr "Qayta urinish"
+
+msgid "Nothing here yet"
+msgstr "Hozircha bu yerda hech narsa yo‘q"
+
+msgid "No products match “%s”"
+msgstr "«%s» bo‘yicha hech narsa topilmadi"
+
+msgid "Checkout failed. Please try again."
+msgstr "Rasmiylashtirishga o‘tib bo‘lmadi. Qayta urinib ko‘ring."
+
+msgid "Open this shop from its Telegram bot to place an order."
+msgstr "Buyurtma berish uchun do‘konni uning Telegram boti orqali oching."
+
+msgid "Some items changed since you added them and were updated."
+msgstr "Ba’zi mahsulotlar savatga qo‘shilgandan keyin o‘zgardi va yangilandi."
+
+msgid "Back"
+msgstr "Orqaga"
+
+msgid "Telegram: buyer was told the order is “%s”."
+msgstr "Telegram: xaridorga buyurtma holati «%s» ekani xabar qilindi."
+
+msgid "Telegram message failed: %s"
+msgstr "Telegram xabarini yuborib bo‘lmadi: %s"
+
+msgid "Order %1$s: %2$s"
+msgstr "Buyurtma %1$s: %2$s"
+
+msgid "Total: %s"
+msgstr "Jami: %s"
+
+msgid "Payment received. We are preparing your order."
+msgstr "To‘lov qabul qilindi. Buyurtmangizni tayyorlayapmiz."
+
+msgid "We are waiting for your payment to be confirmed."
+msgstr "To‘lov tasdiqlanishini kutyapmiz."
+
+msgid "Your order is complete. Thank you for shopping with us!"
+msgstr "Buyurtmangiz bajarildi. Xaridingiz uchun rahmat!"
+
+msgid "Your order was cancelled. Contact the shop if you have questions."
+msgstr "Buyurtmangiz bekor qilindi. Savollar bo‘lsa, do‘kon bilan bog‘laning."
+
+msgid "Your order was refunded."
+msgstr "Buyurtma uchun pul qaytarildi."
+
+msgid "Telegram buyer:"
+msgstr "Telegramdagi xaridor:"
+
+msgid "(id %d)"
+msgstr "(id %d)"
+
+msgid "Mini Shop for Telegram needs WooCommerce to be installed and active."
+msgstr "Mini Shop for Telegram ishlashi uchun WooCommerce o‘rnatilgan va faol bo‘lishi kerak."
+
+msgid "Telegram Mini Shop"
+msgstr "Telegram do‘koni"
+
+msgid "Settings"
+msgstr "Sozlamalar"
+
+msgid "Settings saved. The bot token was removed."
+msgstr "Sozlamalar saqlandi. Bot tokeni o‘chirildi."
+
+msgid "Settings saved, but that does not look like a bot token. Copy it from @BotFather again."
+msgstr "Sozlamalar saqlandi, lekin bu bot tokeniga o‘xshamaydi. Uni @BotFather dan qaytadan nusxalang."
+
+msgid "Settings saved."
+msgstr "Sozlamalar saqlandi."
+
+msgid "Bot disconnected. The token is still saved."
+msgstr "Bot uzildi. Token saqlangan holda qoldi."
+
+msgid "Connected to @%s. Open the bot in Telegram and send /start."
+msgstr "@%s ga ulandi. Botni Telegramda oching va /start yuboring."
+
+msgid "Telegram said: %s"
+msgstr "Telegram javobi: %s"
+
+msgid "You are not allowed to change these settings."
+msgstr "Bu sozlamalarni o‘zgartirishga ruxsatingiz yo‘q."
+
+msgid "This checkout link has expired. Open the shop in Telegram and tap Checkout again."
+msgstr "Rasmiylashtirish havolasi eskirgan. Do‘konni Telegramda oching va «Rasmiylashtirish» tugmasini qayta bosing."
+
+msgid "Welcome to %s! Tap the button below to browse the catalog and order right here in Telegram."
+msgstr "%s ga xush kelibsiz! Katalogni ko‘rish va shu yerning o‘zida, Telegramda buyurtma berish uchun quyidagi tugmani bosing."
+
+msgid "Bot status"
+msgstr "Bot holati"
+
+msgid "Bot"
+msgstr "Bot"
+
+msgid "Connected to @%s"
+msgstr "@%s ga ulangan"
+
+msgid "Open in Telegram"
+msgstr "Telegramda ochish"
+
+msgid "Token saved, bot not connected."
+msgstr "Token saqlangan, bot ulanmagan."
+
+msgid "Not set up. Create a bot with @BotFather and paste its token below."
+msgstr "Sozlanmagan. @BotFather orqali bot yarating va uning tokenini quyiga joylang."
+
+msgid "Last Telegram error: %s"
+msgstr "Telegramning oxirgi xatosi: %s"
+
+msgid "Mini App URL"
+msgstr "Mini App manzili"
+
+msgid "Set automatically as the bot menu button. Telegram needs an HTTPS site."
+msgstr "Bot menyusi tugmasi sifatida avtomatik o‘rnatiladi. Telegram uchun sayt HTTPS da bo‘lishi kerak."
+
+msgid "Reconnect bot"
+msgstr "Botni qayta ulash"
+
+msgid "Connect bot"
+msgstr "Botni ulash"
+
+msgid "Disconnect"
+msgstr "Uzish"
+
+msgid "Bot token"
+msgstr "Bot tokeni"
+
+msgid "Saved. Paste a new token to replace it."
+msgstr "Saqlangan. Almashtirish uchun yangi token joylang."
+
+msgid "Stored on this site only and never shown again. Saving a new token connects the bot."
+msgstr "Faqat shu saytda saqlanadi va boshqa ko‘rsatilmaydi. Yangi token saqlanganda bot ulanadi."
+
+msgid "Remove the saved token"
+msgstr "Saqlangan tokenni o‘chirish"
+
+msgid "Reply to /start"
+msgstr "/start ga javob"
+
+msgid "Default: a short welcome with the shop name."
+msgstr "Standart: do‘kon nomi bilan qisqa salomlashuv."
+
+msgid "Button text"
+msgstr "Tugma matni"
+
+msgid "Storefront"
+msgstr "Vitrina"
+
+msgid "Shop title"
+msgstr "Do‘kon nomi"
+
+msgid "Accent colour"
+msgstr "Asosiy rang"
+
+msgid "Hex colour for prices and badges. Leave empty to follow the buyer’s Telegram theme."
+msgstr "Narxlar va belgilar uchun HEX rang. Xaridorning Telegram mavzusiga moslash uchun bo‘sh qoldiring."
+
+msgid "Categories"
+msgstr "Toifalar"
+
+msgid "None ticked: the whole catalog (simple and variable products)."
+msgstr "Hech biri belgilanmasa: butun katalog (oddiy va variantli mahsulotlar)."
+
+msgid "Buyer messages"
+msgstr "Xaridorga xabarlar"
+
+msgid "Send a Telegram message when an order becomes"
+msgstr "Buyurtma quyidagi holatga o‘tganda Telegramda xabar yuborish"
+
+msgid "Order statuses"
+msgstr "Buyurtma holatlari"
+
+msgid "This shop needs JavaScript. Open it from the Telegram bot."
+msgstr "Do‘kon ishlashi uchun JavaScript kerak. Uni Telegram bot orqali oching."

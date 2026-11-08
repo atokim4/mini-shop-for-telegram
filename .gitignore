@@ -1,0 +1,10 @@
+node_modules/
+vendor/
+dist/
+test-results/
+playwright-report/
+.phpunit.cache/
+.env
+*.zip
+dev/.cache/
+.phpunit.result.cache

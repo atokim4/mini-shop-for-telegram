@@ -1,0 +1,16 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/admin.php?page=mini-shop-for-telegram",
+	"preferredVersions": { "php": "8.3", "wp": "latest" },
+	"features": { "networking": true },
+	"steps": [
+		{ "step": "login" },
+		{
+			"step": "installPlugin",
+			"pluginData": { "resource": "wordpress.org/plugins", "slug": "woocommerce" },
+			"options": { "activate": true }
+		},
+		{ "step": "activatePlugin", "pluginPath": "mini-shop-for-telegram/mini-shop-for-telegram.php" },
+		{ "step": "runPHP", "code": "<?php require '/wordpress/wp-load.php'; require '/mstg-dev/seed.php';" }
+	]
+}
